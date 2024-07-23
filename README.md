@@ -28,6 +28,9 @@ Each project is contained in its own Python file. To run a project, navigate to 
 ```bash
 python <filename>.py
 ```
+```bash
+python3 <filename>.py
+```
 
 ## Contributing
 Feel free to fork this repository and contribute by adding more mini projects or improving the existing ones. Pull requests are welcome!
