@@ -15,6 +15,5 @@ first_letter = ["a", "b", "c", "d", "e", "f"]
 map_first = first_letter.index(first)
 map[second][map_first] = "X"
 
-# Write your code above this row 👆
-# 🚨 Don't change the code below 👇
+
 print(f"{line1}\n{line2}\n{line3}\n{line4}\n{line5}\n{line6}")
