@@ -1,27 +1,50 @@
+import hangman_words
 import random
-word_list = ["aardvark", "baboon", "camel"]
-chosen_word = random.choice(word_list)
+import hangman_art
+import os
 
-#Testing code
+chosen_word = random.choice(hangman_words.word_list)
+word_length = len(chosen_word)
+
+end_of_game = False
+lives = 6
+guessed_letters = []
+
+print(hangman_art.logo)
 print(f'Pssst, the solution is {chosen_word}.')
 
-display = []
+display = ["_"] * word_length
 
-for letter in chosen_word:
-    display += "_"
+while not end_of_game:
+    guess = input("Guess a letter: ").lower()
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print()
+    print(f"Guessed Letters: {guessed_letters}")
     
-guess = input("Guess a letter: ").lower()
+    if len(guess) != 1:
+        print("Please enter a single letter.")
+    else:
+        if guess in guessed_letters:
+            print(f"You have already guessed this letter before letter: {guess}")
+        else:
+            guessed_letters.append(guess)
+            
+            if guess in chosen_word:
+                for position in range(word_length):
+                    letter = chosen_word[position]
+                    if letter == guess:
+                        display[position] = letter
+            else:
+                print(f"Sorry wrong guess {guess} is not in the word.")
+                lives -= 1
+                if lives == 0:
+                    end_of_game = True
+                    print("You lose.")
 
-print(display)
+    print(f"{' '.join(display)}")
 
-#TODO-2: - Loop through each position in the chosen_word;
-#If the letter at that position matches 'guess' then reveal that letter in the display at that position.
-#e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
+    if "_" not in display:
+        end_of_game = True
+        print("You win.")
 
-for letter in range(len(chosen_word)):
-    if letter == guess:
-        letter =
-    
-
-#TODO-3: - Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
-#Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3.
+    print(hangman_art.stages[lives])
