@@ -22,6 +22,8 @@ This repository contains a collection of mini Python projects developed for lear
 - ticket_calculator.py
 - tip_calculator.py
 - treasure_map.py
+- paint_area_calculator.py
+- prime_number.py
 
 ## Usage
 Each project is contained in its own Python file. To run a project, navigate to the repository directory and execute the desired Python file using the command:
