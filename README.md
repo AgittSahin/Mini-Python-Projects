@@ -5,6 +5,7 @@ This repository contains a collection of mini Python projects developed for lear
 
 ## Projects Included
 
+- ceasar_cipher.py
 - hangman.py
 - password_generator.py
 - fizz_buzz.py
