@@ -52,7 +52,7 @@ def calculation():
         calculation_printer
         global cont_calc
         cont_calc = input(f"Type 'yes' to continue calculating with {result}, 'new' to start a new calculation, or type 'quit' to quit the Calculator \n").lower()
-    
+
 calculation()
 
 while continue_calculation:
