@@ -5,13 +5,17 @@ This repository contains a collection of mini Python projects developed for lear
 
 ## Projects Included
 
-- student_scores.py
+- calculator.py
+- secret_auction.py
 - ceasar_cipher.py
 - hangman.py
 - password_generator.py
+- calculator.py
 - fizz_buzz.py
 - love_calculator.py
 - lists.py
+- format_name.py
+- student_scores.py
 - leap_year.py
 - hunter.py
 - range.py
