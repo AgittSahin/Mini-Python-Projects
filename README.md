@@ -5,6 +5,7 @@ This repository contains a collection of mini Python projects developed for lear
 
 ## Projects Included
 
+- black_jack.py
 - calculator.py
 - secret_auction.py
 - ceasar_cipher.py
