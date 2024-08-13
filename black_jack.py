@@ -34,10 +34,15 @@ def hit_stats():
 
 def hit():
     global end_game
+    ace11 = 11
+    ace1 = 1
     hit = input("Type 'y' to get another card, type 'n' to pass: ").lower()
     if hit == "y":
         my_deck.append(random.choice(cards))
         if sum(my_deck) > 21:
+            if ace11 in my_deck:
+                index = my_deck.index(ace11)
+                my_deck[index] = ace1
             winner()
             return
         elif sum(my_deck) == 21:
